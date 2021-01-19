@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 export const PlanetCard = props => {
 	return (
 		<>
-			<div className="card" style={{ width: "18rem" }}>
-				<img src="..." className="card-img-top" alt="..." />
+			<div className="planet-card text-white ml-5" style={{ width: "18rem" }}>
+				<img src={props.planet.image} className="card-img-top" alt="..." />
 				<div className="card-body">
 					<h5 className="card-title">{props.planet.name}</h5>
 					<p className="card-text">
