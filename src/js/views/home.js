@@ -8,23 +8,25 @@ export const Home = () => {
 	const [planets, setPlanets] = useState([{ name: "Death Star" }, { name: "The Republic" }]);
 
 	return (
-		<div className="container-fluid">
-			<div className="characters">
-				<h1>Characters</h1>
-				<div className="character-card d-flex">
-					{characters.map((value, index) => {
-						return <CharacterCard key={index} character={value} />;
-					})}
+		<>
+			<div className="container-fluid">
+				<div className="characters">
+					<h1>Characters</h1>
+					<div className="character-card d-flex">
+						{characters.map((value, index) => {
+							return <CharacterCard key={index} character={value} />;
+						})}
+					</div>
+				</div>
+				<div className="planets">
+					<h1>Planets</h1>
+					<div className="planets-card d-flex">
+						{planets.map((value, index) => {
+							return <PlanetCard key={index} planet={value} />;
+						})}
+					</div>
 				</div>
 			</div>
-			<div className="planets">
-				<h1>Planets</h1>
-				<div className="planets-card d-flex">
-					{planets.map((value, index) => {
-						return <PlanetCard key={index} planet={value} />;
-					})}
-				</div>
-			</div>
-		</div>
+		</>
 	);
 };
