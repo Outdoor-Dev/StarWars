@@ -155,7 +155,7 @@ export const Home = () => {
 	return (
 		<>
 			<video
-				src="https://v.ftcdn.net/04/01/74/36/700_F_401743657_N1QXKB9IDaiHWnMPem27b1LOgF8Zhycv_ST.mp4"
+				src="https://v.ftcdn.net/00/19/76/37/700_F_19763726_Wm4aPjRoZ81J7dZireLrkqSefBn0cW6y_ST.mp4"
 				loop
 				autoPlay
 			/>
