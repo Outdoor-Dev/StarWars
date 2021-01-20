@@ -17,7 +17,7 @@ export const PlanetCard = props => {
 					<a href="#" className="btn btn-outline-light text-white">
 						Learn More
 					</a>
-					<i className="far fa-heart" />
+					<i className="far fa-heart heart fa-lg" />
 				</div>
 			</div>
 		</>

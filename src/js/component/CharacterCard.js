@@ -29,7 +29,7 @@ export const CharacterCard = props => {
 					<a href="#" className="btn btn-outline-light text-white">
 						Learn More
 					</a>
-					<i className="far fa-heart fa-lg " />
+					<i className="far fa-heart heart fa-lg " />
 				</div>
 			</div>
 		</>

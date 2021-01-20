@@ -48,8 +48,8 @@ export const Home = () => {
 			/>
 			<div className="container-fluid">
 				{" "}
-				<div className="characters ">
-					<h1 className="text-white ml-5">Characters</h1>
+				<div className="characters  ">
+					<h2 className="text-white ml-5">Characters</h2>
 					<div className="character-card d-flex align-content  flex-wrap ">
 						{characters.map((value, index) => {
 							return <CharacterCard key={index} character={value} />;
@@ -57,7 +57,7 @@ export const Home = () => {
 					</div>
 				</div>
 				<div className="planets">
-					<h1 className="text-white ml-5">Planets</h1>
+					<h2 className="text-white ml-5">Planets</h2>
 
 					<div className="planets-card d-flex align-content-stretch flex-wrap">
 						{planets.map((value, index) => {
