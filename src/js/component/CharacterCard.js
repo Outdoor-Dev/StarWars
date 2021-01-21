@@ -2,32 +2,33 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const CharacterCard = props => {
+export const CharacterCard = ({ character, index }) => {
+	console.log(index);
 	return (
 		<>
 			<div className="charactercard background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
 				<img
-					src="https://static.wikia.nocookie.net/worldsgreatestheroes/images/9/91/Obi-Wan_Headshot.jpg/revision/latest/scale-to-width-down/427?cb=20140512143941"
+					src="https://cdn.vox-cdn.com/thumbor/KnYjrcxAozD5Q8pmr3QAXsJCwag=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/6434955/obi-wan.0.jpg"
 					className="card-img-top"
 					style={{ width: 305, height: 400 }}
 					alt="..."
 				/>
 				<div className="card-body ">
-					<h5 className="card-title ">{props.character.name}</h5>
+					<h5 className="card-title ">{character.name}</h5>
 					<p className="card-text">
 						Height:
-						{props.character.height}
+						{character.height}
 					</p>
 					<p className="card-text">
 						Eye Color:
-						{props.character.eye_color}
+						{character.eye_color}
 					</p>
 					<p className="card-text">
 						Hair Color:
-						{props.character.hair_color}
+						{character.hair_color}
 					</p>
 
-					<Link to={"/characterdetails/" + props.character.id} className="btn btn-outline-light text-white">
+					<Link to={"/characterdetails/" + index} className="btn btn-outline-light text-white">
 						Learn More
 					</Link>
 					<i className="far fa-heart heart fa-lg " />
@@ -39,4 +40,7 @@ export const CharacterCard = props => {
 
 CharacterCard.propTypes = {
 	character: PropTypes.object
+};
+CharacterCard.propTypes = {
+	index: PropTypes.number
 };

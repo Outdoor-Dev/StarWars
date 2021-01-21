@@ -52,7 +52,8 @@ export const Home = () => {
 					<h2 className="text-white ml-5">Characters</h2>
 					<div className="character-card d-flex align-content  flex-wrap ">
 						{characters.map((value, index) => {
-							return <CharacterCard key={index} character={value} />;
+							console.log("index", index);
+							return <CharacterCard key={index} character={value} index={index} />;
 						})}
 					</div>
 				</div>
