@@ -29,16 +29,15 @@ image{
      
 }
 .navbar-brand{
-      -webkit-transform: scale(2, 1);
-        -moz-transform: scale(2, 1);
-        -o-transform: scale(2, 1);
-        transform: scale(2, 1);
+   margin-top:-50px; 
   margin-left:600px;
-  font-family: 'Poller One', cursive;
-  font-size:33px;
-  line-height: 28px;
+
+ 
   
     
+}
+.dropdown{
+    margin-top:-50px;
 }
 .heart{
     position:absolute;
