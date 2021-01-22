@@ -12,7 +12,7 @@ export const CharacterCard = ({ character, index }) => {
 		<>
 			<div className="charactercard background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
 				<img
-					src="https://cdn.vox-cdn.com/thumbor/KnYjrcxAozD5Q8pmr3QAXsJCwag=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/6434955/obi-wan.0.jpg"
+					src="https://i.pinimg.com/originals/1a/bc/b5/1abcb54c7291437e92e659884e30a1f1.jpg"
 					className="card-img-top"
 					style={{ width: 305, height: 400 }}
 					alt="..."
