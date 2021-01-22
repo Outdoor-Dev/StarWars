@@ -18,7 +18,7 @@ export const PlanetDetails = () => {
 				<div className="main-info ">
 					<img
 						className="gif"
-						src="https://media2.giphy.com/media/xT9DPE7p0tbSGfcMJa/source.gif"
+						src="https://64.media.tumblr.com/27584e769d91183fb5a37a1f02946933/tumblr_nilmt3nkyp1rsrbdko4_r1_500.gifv"
 						style={{ width: 600, height: 400 }}
 					/>
 					<h1 className=" detail-title d-flex justify-content-center text-white">{store.details.name}</h1>
