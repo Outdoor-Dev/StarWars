@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Star from "../../img/Star.png";
 
 export const Navbar = () => {
 	return (
@@ -10,6 +11,7 @@ export const Navbar = () => {
 				<i className="fab fa-twitter fa-lg ml-2" />
 				<i className="fab fa-youtube fa-lg ml-2" />
 			</div>
+			<img src={Star} />
 			<Link to="/">
 				<span className="navbar-brand text-white mb-0 h1">
 					StaR
@@ -29,21 +31,9 @@ export const Navbar = () => {
 							Favorites
 						</button>
 						<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<li>
-								<a className="dropdown-item" href="#">
-									Action
-								</a>
-							</li>
-							<li>
-								<a className="dropdown-item" href="#">
-									Another action
-								</a>
-							</li>
-							<li>
-								<a className="dropdown-item" href="#">
-									Something else here
-								</a>
-							</li>
+							<li>Action</li>
+							<li>Another action</li>
+							<li>Something else here</li>
 						</ul>
 					</div>
 				</Link>

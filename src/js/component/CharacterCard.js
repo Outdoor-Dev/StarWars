@@ -7,6 +7,7 @@ import { Context } from "../store/appContext";
 export const CharacterCard = ({ character, index }) => {
 	const { actions } = useContext(Context);
 	// actions accessing in flux, the functions that change global state (store) (like setStore from useState). useContext accesing the global state. Context is the initializes context
+	const [heart, setHeart] = useState(false);
 
 	return (
 		<>
@@ -40,7 +41,15 @@ export const CharacterCard = ({ character, index }) => {
 						}}>
 						Learn More
 					</Link>
-					<i className="far fa-heart heart fa-lg " />
+
+					<i
+						className="far fa-heart heart fa-lg "
+						style={{
+							fontWeight: heart ? "bold" : "",
+							color: heart ? "rgb(185, 19, 19)" : "white"
+						}}
+						onClick={() => setHeart(!heart)}
+					/>
 				</div>
 			</div>
 		</>
