@@ -42,6 +42,7 @@ export const Home = () => {
 	return (
 		<>
 			<video
+				className="background-video"
 				src="https://v.ftcdn.net/00/19/76/37/700_F_19763726_Wm4aPjRoZ81J7dZireLrkqSefBn0cW6y_ST.mp4"
 				loop
 				autoPlay

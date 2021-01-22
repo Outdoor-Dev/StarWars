@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { CharacterDetails } from "../views/CharacterDetails";
+import { Context } from "../store/appContext";
 
 export const CharacterCard = ({ character, index }) => {
-	console.log(index);
+	const { actions } = useContext(Context);
+	// actions accessing in flux, the functions that change global state (store) (like setStore from useState). useContext accesing the global state. Context is the initializes context
+
 	return (
 		<>
 			<div className="charactercard background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
@@ -28,7 +32,12 @@ export const CharacterCard = ({ character, index }) => {
 						{character.hair_color}
 					</p>
 
-					<Link to={"/characterdetails/" + index} className="btn btn-outline-light text-white">
+					<Link
+						to={"/characterdetails/" + index}
+						className="btn btn-outline-light text-white"
+						onClick={() => {
+							actions.setDetails(character);
+						}}>
 						Learn More
 					</Link>
 					<i className="far fa-heart heart fa-lg " />

@@ -1,4 +1,4 @@
-video{
+.background-video{
  
   position: fixed;
   right: 0;
@@ -60,4 +60,33 @@ h2{
     border-bottom:1px solid white;
     border-top:1px solid white;
    
+}
+
+.characterdetails{
+     border-top:1px solid white;
+    margin-top:50px;
+ 
+}
+.main-info{
+    margin-top:150px;
+    margin-left:800px;
+    margin-right:80px;
+    
+}
+.background-image{
+      position: fixed;
+ z-index:-30;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+.gif{
+  
+    margin-left:-690px;
+    margin-top:-20px;
+    
+
+}
+.detail-title{
+    margin-top:-400px;
 }
