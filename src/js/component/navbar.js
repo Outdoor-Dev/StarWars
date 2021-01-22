@@ -15,7 +15,7 @@ export const Navbar = () => {
 
 			<Link to="/">
 				<span className="navbar-brand   h1">
-					<img className src={Star} style={{ width: 200, height: 160 }} />
+					<img className src={Star} style={{ width: 240, height: 160 }} />
 				</span>
 			</Link>
 			<DropDown />

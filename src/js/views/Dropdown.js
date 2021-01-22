@@ -25,10 +25,10 @@ export const DropDown = () => {
 							<li>Action</li>
 							<li>Another action</li>
 							<li>Something else here</li>
+							<Link to="/">
+								<button className="btn btn">Back home</button>
+							</Link>
 						</ul>
-						<Link to="/">
-							<button className="btn btn-primary">Back home</button>
-						</Link>
 					</div>
 				</Link>
 			</div>
