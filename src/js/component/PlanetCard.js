@@ -11,10 +11,10 @@ export const PlanetCard = ({ planet, index }) => {
 		<>
 			<div className="planet-card background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
 				<img
-					src="https://lumiere-a.akamaihd.net/v1/images/Coruscant_03db43b4.jpeg?region=0%2C96%2C1536%2C768"
+					src="https://lumiere-a.akamaihd.net/v1/images/databank_kamino_01_169_f9027822.jpeg?region=0%2C49%2C1560%2C780"
 					className="card-img-top"
 					alt="..."
-					style={{ width: 305, height: 200 }}
+					style={{ width: 305, height: 320 }}
 				/>
 
 				<div className="card-body ">

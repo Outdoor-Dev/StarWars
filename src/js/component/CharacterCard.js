@@ -15,7 +15,7 @@ export const CharacterCard = ({ character, index }) => {
 				<img
 					src="https://i.pinimg.com/originals/1a/bc/b5/1abcb54c7291437e92e659884e30a1f1.jpg"
 					className="card-img-top"
-					style={{ width: 305, height: 400 }}
+					style={{ width: 305, height: 320 }}
 					alt="..."
 				/>
 				<div className="card-body ">
