@@ -43,8 +43,8 @@ export const Home = () => {
 		<>
 			<video
 				className="background-video"
-				// src="https://v.ftcdn.net/00/19/76/37/700_F_19763726_Wm4aPjRoZ81J7dZireLrkqSefBn0cW6y_ST.mp4"
-				src="https://v.ftcdn.net/03/99/58/47/700_F_399584730_LNmPejWjkdeZL8qlwgc7SdLX6H5860cH_ST.mp4"
+				src="https://v.ftcdn.net/00/19/76/37/700_F_19763726_Wm4aPjRoZ81J7dZireLrkqSefBn0cW6y_ST.mp4"
+				// src="https://v.ftcdn.net/03/99/58/47/700_F_399584730_LNmPejWjkdeZL8qlwgc7SdLX6H5860cH_ST.mp4"
 				loop
 				autoPlay
 			/>

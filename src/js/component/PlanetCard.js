@@ -11,10 +11,10 @@ export const PlanetCard = ({ planet, index }) => {
 		<>
 			<div className="planet-card background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
 				<img
-					src="https://lumiere-a.akamaihd.net/v1/images/databank_kamino_01_169_f9027822.jpeg?region=0%2C49%2C1560%2C780"
+					src="https://i0.wp.com/thegamefanatics.com/wp-content/uploads/2016/06/star-wars-battlefront-bespin-dlc-update-needs-content-that-should-have-been-there-at-la-943519.jpg?fit=1936%2C1090&ssl=1"
 					className="card-img-top"
 					alt="..."
-					style={{ width: 305, height: 320 }}
+					style={{ width: 305, height: 360 }}
 				/>
 
 				<div className="card-body ">

@@ -5,7 +5,7 @@ import { DropDown } from "../views/Dropdown.js";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light  ">
+		<nav className="navbar navbar-light ">
 			<div className="icons  ">
 				<i className="fab fa-facebook fa-lg ml-2" />
 				<i className="fab fa-instagram fa-lg ml-2" />
