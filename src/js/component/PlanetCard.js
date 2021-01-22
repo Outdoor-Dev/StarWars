@@ -11,7 +11,7 @@ export const PlanetCard = ({ planet, index }) => {
 		<>
 			<div className="planet-card background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
 				<img
-					src="https://media.cntraveler.com/photos/5727696bb161ad8b31235293/16:9/w_2560%2Cc_limit/GettyImages-143687829-tunisia.jpg"
+					src="https://lumiere-a.akamaihd.net/v1/images/Coruscant_03db43b4.jpeg?region=0%2C96%2C1536%2C768"
 					className="card-img-top"
 					alt="..."
 					style={{ width: 305, height: 200 }}
