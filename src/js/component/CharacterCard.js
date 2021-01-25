@@ -8,7 +8,11 @@ export const CharacterCard = ({ character, index }) => {
 	const { actions } = useContext(Context);
 	// actions accessing in flux, the functions that change global state (store) (like setStore from useState). useContext accesing the global state. Context is the initializes context
 	const [heart, setHeart] = useState(false);
-
+	const handleClick = () => {
+		setHeart(!heart);
+		actions.addFavorite(character.name);
+		console.log(character.name);
+	};
 	return (
 		<>
 			<div className="charactercard background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
@@ -43,13 +47,12 @@ export const CharacterCard = ({ character, index }) => {
 					</Link>
 
 					<i
-						onClick={() => actions.addFavorite(props.character.name)}
+						onClick={() => handleClick()}
 						className="far fa-heart heart fa-lg "
 						style={{
 							fontWeight: heart ? "bold" : "",
 							color: heart ? "rgb(185, 19, 19)" : "white"
 						}}
-						onClick={() => setHeart(!heart)}
 					/>
 				</div>
 			</div>

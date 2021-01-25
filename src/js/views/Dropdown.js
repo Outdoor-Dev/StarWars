@@ -11,26 +11,26 @@ export const DropDown = () => {
 	return (
 		<>
 			<div className="ml-auto">
-				<Link to="/dropdown">
-					<div className="dropdown">
-						<button
-							className="btn btn-outline-light text-white dropdown-toggle"
-							type="button"
-							id="dropdownMenuButton"
-							data-bs-toggle="dropdown"
-							aria-expanded="false">
-							Favorites
-						</button>
-						<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<li>Action</li>
-							<li>Another action</li>
-							<li>Something else here</li>
-							<Link to="/">
-								<button className="btn btn">Back home</button>
-							</Link>
-						</ul>
-					</div>
-				</Link>
+				{/* <Link to="/dropdown"> */}
+				<div className="dropdown">
+					<button
+						className="btn btn-outline-light text-white dropdown-toggle"
+						type="button"
+						id="dropdownMenuButton"
+						data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Favorites
+					</button>
+					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						{store.favorites.map((favorite, index) => {
+							return <li key={index}>{favorite}</li>;
+						})}
+						{/* <Link to="/">
+							<button className="btn btn">Back home</button>
+						</Link> */}
+					</ul>
+				</div>
+				{/* </Link> */}
 			</div>
 		</>
 	);
