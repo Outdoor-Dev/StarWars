@@ -7,6 +7,11 @@ import { Context } from "../store/appContext";
 export const PlanetCard = ({ planet, index }) => {
 	const { actions } = useContext(Context);
 	const [heart, setHeart] = useState(false);
+	const handleClick = () => {
+		setHeart(!heart);
+		actions.addFavorite(planet.name);
+		console.log(planet.name);
+	};
 	return (
 		<>
 			<div className="planet-card background-card text-white ml-5 mb-5 " style={{ width: "19rem" }}>
@@ -40,12 +45,12 @@ export const PlanetCard = ({ planet, index }) => {
 						Learn More
 					</Link>
 					<i
+						onClick={() => handleClick()}
 						className="far fa-heart heart fa-lg "
 						style={{
 							fontWeight: heart ? "bold" : "",
 							color: heart ? "rgb(185, 19, 19)" : "white"
 						}}
-						onClick={() => setHeart(!heart)}
 					/>
 				</div>
 			</div>
