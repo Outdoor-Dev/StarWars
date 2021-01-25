@@ -43,6 +43,7 @@ export const CharacterCard = ({ character, index }) => {
 					</Link>
 
 					<i
+						onClick={() => actions.addFavorite(props.character.name)}
 						className="far fa-heart heart fa-lg "
 						style={{
 							fontWeight: heart ? "bold" : "",

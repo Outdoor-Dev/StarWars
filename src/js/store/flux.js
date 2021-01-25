@@ -1,29 +1,62 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
+			favorites: [],
+			characters: [],
+			planets: [],
 			details: {}
 		},
 		actions: {
+			addFavorite: newItem => {
+				var storeCopy = getStore();
+				var updateFavorites = storeCopy.favorites.concat(newItem);
+
+				setStore({ favorites: updateFavorites });
+			},
+			DeleteFavorite: newItem => {
+				var storeCopy = getStore();
+				var newFavorites = storeCopy.favorites.find((element, index) => {
+					return element != "Darth Vader";
+				});
+
+				setStore({ favorites: newFavorites });
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+				fetch("https://swapi.dev/api/people/")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error("error");
+						}
+
+						return response.json();
+					})
+					.then(function(responseAsJson) {
+						setStore({ characters: responseAsJson.results });
+						console.log(responseAsJson);
+					})
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
+
+				fetch("https://swapi.dev/api/planets/")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error("error");
+						}
+
+						return response.json();
+					})
+					.then(function(responseAsJson) {
+						setStore({ planets: responseAsJson.results });
+						console.log(responseAsJson);
+					})
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
 			},
 			changeColor: (index, color) => {
 				//get the store

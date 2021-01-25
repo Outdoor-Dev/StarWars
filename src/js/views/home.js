@@ -1,43 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { CharacterCard } from "../component/CharacterCard";
 import { PlanetCard } from "../component/PlanetCard";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
 
 export const Home = () => {
-	const [characters, setCharacters] = useState([]);
-	const [planets, setPlanets] = useState([]);
-	useEffect(() => {
-		fetch("https://swapi.dev/api/people/")
-			.then(function(response) {
-				if (!response.ok) {
-					throw Error("error");
-				}
-
-				return response.json();
-			})
-			.then(function(responseAsJson) {
-				setCharacters(responseAsJson.results);
-				console.log(responseAsJson);
-			})
-			.catch(function(error) {
-				console.log("Looks like there was a problem: \n", error);
-			});
-		fetch("https://swapi.dev/api/planets/")
-			.then(function(response) {
-				if (!response.ok) {
-					throw Error("error");
-				}
-
-				return response.json();
-			})
-			.then(function(responseAsJson) {
-				setPlanets(responseAsJson.results);
-				console.log(responseAsJson);
-			})
-			.catch(function(error) {
-				console.log("Looks like there was a problem: \n", error);
-			});
-	}, []);
+	const { store, actions } = useContext(Context);
 
 	return (
 		<>
@@ -53,7 +21,7 @@ export const Home = () => {
 				<div className="characters  ">
 					<h2 className="text-white ml-5 mb-3">Characters</h2>
 					<div className="character-card d-flex align-content  flex-wrap ">
-						{characters.map((value, index) => {
+						{store.characters.map((value, index) => {
 							console.log("index", index);
 							return <CharacterCard key={index} character={value} index={index} />;
 						})}
@@ -63,7 +31,7 @@ export const Home = () => {
 					<h2 className="text-white ml-5 mb-3">Planets</h2>
 
 					<div className="planets-card d-flex align-content-stretch flex-wrap">
-						{planets.map((value, index) => {
+						{store.planets.map((value, index) => {
 							return <PlanetCard key={index} planet={value} index={index} />;
 						})}
 					</div>
