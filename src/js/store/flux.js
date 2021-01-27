@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			DeleteFavorite: newItem => {
 				var storeCopy = getStore();
 				var newFavorites = storeCopy.favorites.find((element, index) => {
-					return element != "Darth Vader";
+					return element != newItem;
 				});
 
 				setStore({ favorites: newFavorites });
