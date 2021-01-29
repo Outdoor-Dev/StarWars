@@ -13,10 +13,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				setStore({ favorites: updateFavorites });
 			},
-			DeleteFavorite: newItem => {
+			deleteFavorite: newItem => {
 				var storeCopy = getStore();
-				var newFavorites = storeCopy.favorites.find((element, index) => {
-					return element != newItem;
+				var newFavorites = storeCopy.favorites.filter((element, index) => {
+					return index !== newItem;
 				});
 
 				setStore({ favorites: newFavorites });

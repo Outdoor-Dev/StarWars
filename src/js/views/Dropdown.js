@@ -23,7 +23,17 @@ export const DropDown = () => {
 					</button>
 					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						{store.favorites.map((favorite, index) => {
-							return <li key={index}>{favorite}</li>;
+							return (
+								<li key={index}>
+									{favorite}{" "}
+									<i
+										className="ml-2 far fa-trash-alt"
+										onClick={() => {
+											actions.deleteFavorite(index);
+										}}
+									/>
+								</li>
+							);
 						})}
 						{/* <Link to="/">
 							<button className="btn btn">Back home</button>

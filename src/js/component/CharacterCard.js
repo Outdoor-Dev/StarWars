@@ -9,9 +9,12 @@ export const CharacterCard = ({ character, index }) => {
 	// actions accessing in flux, the functions that change global state (store) (like setStore from useState). useContext accesing the global state. Context is the initializes context
 	const [heart, setHeart] = useState(false);
 	const handleClick = () => {
+		if (heart) {
+			actions.deleteFavorite(index);
+		} else {
+			actions.addFavorite(character.name);
+		}
 		setHeart(!heart);
-		actions.addFavorite(character.name);
-		console.log(character.name);
 	};
 	return (
 		<>
