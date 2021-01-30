@@ -5,16 +5,28 @@ import { CharacterDetails } from "../views/CharacterDetails";
 import { Context } from "../store/appContext";
 
 export const CharacterCard = ({ character, index }) => {
-	const { actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	// actions accessing in flux, the functions that change global state (store) (like setStore from useState). useContext accesing the global state. Context is the initializes context
-	const [heart, setHeart] = useState(false);
+	const [heart, setHeart] = useState(null);
+	useEffect(
+		() => {
+			var result = store.favorites.find((element, index) => {
+				return element == character.name;
+			});
+
+			setHeart(result);
+		},
+
+		[store.favorites]
+	);
+
 	const handleClick = () => {
 		if (heart) {
-			actions.deleteFavorite(index);
+			actions.deleteFavorite(character.name);
 		} else {
 			actions.addFavorite(character.name);
 		}
-		setHeart(!heart);
+		// setHeart(!heart);
 	};
 	return (
 		<>

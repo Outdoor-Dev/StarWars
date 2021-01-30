@@ -29,7 +29,7 @@ export const DropDown = () => {
 									<i
 										className="ml-2 far fa-trash-alt"
 										onClick={() => {
-											actions.deleteFavorite(index);
+											actions.deleteFavorite(favorite);
 										}}
 									/>
 								</li>
