@@ -35,34 +35,6 @@ export const PlanetDetails = () => {
 						train the boy, Anakin Skywalker, to fight on the side of good.
 					</p>
 				</div>
-				<div className="characterdetails d-flex justify-content-center">
-					<div className="row">
-						<div className="col-md-2 pt-4">
-							<h5>Name</h5>
-							<p>{store.details.name}</p>
-						</div>
-						<div className="col-md-2 pt-4 pr-5">
-							<h5>Birthdate</h5>
-							<p> {store.details.birth_year}</p>
-						</div>
-						<div className="col-md-2 pl-5 pt-4 pr-5">
-							<h5>Gender</h5>
-							<p> {store.details.gender}</p>
-						</div>
-						<div className="col-md-2 pl-5 pt-4 pr-5">
-							<h5>Height</h5>
-							<p> {store.details.height}</p>
-						</div>
-						<div className="col-md-2 pl-5 pt-4 pr-5">
-							<h5>Skin Color</h5>
-							<p> {store.details.skin_color}</p>
-						</div>
-						<div className="col-md-2 pt-4 pl-5">
-							<h5>Eye Color</h5>
-							<p> {store.details.eye_color}</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</>
 	);
