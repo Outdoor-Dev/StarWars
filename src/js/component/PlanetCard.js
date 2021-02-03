@@ -34,8 +34,7 @@ export const PlanetCard = ({ planet, index }) => {
 			"https://media.cntraveler.com/photos/5727696bb161ad8b31235293/16:9/w_2560%2Cc_limit/GettyImages-143687829-tunisia.jpg",
 		Alderaan:
 			"https://lumiere-a.akamaihd.net/v1/images/databank_alderaan_01_169_4a5264e2.jpeg?region=0%2C0%2C1560%2C780",
-		"Yavin IV":
-			"https://static.wikia.nocookie.net/starwars/images/c/cf/TempleofYavin4-AoRCR.png/revision/latest?cb=20160723033450",
+		"Yavin IV": "https://i.redd.it/ig9ectnjbgsz.jpg",
 		Hoth:
 			"https://static0.srcdn.com/wordpress/wp-content/uploads/2019/08/star-wars-empire-strikes-back-hoth-ion-canon-echo-base-Edited.jpg",
 		Dagobah: "https://lumiere-a.akamaihd.net/v1/images/dagobah_1ab566e6.jpeg?region=38%2C0%2C598%2C299",
